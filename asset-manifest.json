@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cloth/static/css/main.1e803961.css",
-    "main.js": "/cloth/static/js/main.94c5fe43.js",
+    "main.js": "/cloth/static/js/main.af33f5fb.js",
     "static/js/453.171ddc7f.chunk.js": "/cloth/static/js/453.171ddc7f.chunk.js",
     "static/media/Anybody-VariableFont_wdth,wght.ttf": "/cloth/static/media/Anybody-VariableFont_wdth,wght.012ccb02157eb35fcf75.ttf",
     "static/media/body.ttf": "/cloth/static/media/body.381fc4672c18a3db8064.ttf",
@@ -9,11 +9,11 @@
     "static/media/Jost-Regular.ttf": "/cloth/static/media/Jost-Regular.d2e182cd5d7f484ff398.ttf",
     "index.html": "/cloth/index.html",
     "main.1e803961.css.map": "/cloth/static/css/main.1e803961.css.map",
-    "main.94c5fe43.js.map": "/cloth/static/js/main.94c5fe43.js.map",
+    "main.af33f5fb.js.map": "/cloth/static/js/main.af33f5fb.js.map",
     "453.171ddc7f.chunk.js.map": "/cloth/static/js/453.171ddc7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e803961.css",
-    "static/js/main.94c5fe43.js"
+    "static/js/main.af33f5fb.js"
   ]
 }
