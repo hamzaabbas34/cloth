@@ -4,7 +4,7 @@ import Navbar from "../../navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import Featurelist from "../Feature/FeatureProductlist/Featurelist";
 
-const Product_item = ({ products, productsPerPage }) => {
+const ProductItem = ({ products, productsPerPage }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 	const queryParams = new URLSearchParams(location.search);
@@ -33,11 +33,8 @@ const Product_item = ({ products, productsPerPage }) => {
 			startIndex + productsPerPage
 		);
 
-		return selectedProducts.map((data) => (
-			<>
-				<Navbar />
-				<Featurelist data={data } />
-			</>
+		return selectedProducts.map((data, index) => (
+			<Featurelist key={index} data={data} />
 		));
 	};
 
@@ -53,9 +50,8 @@ const Product_item = ({ products, productsPerPage }) => {
 
 		if (currentPage > 1) {
 			pageNumbers.push(
-				<div className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div key="prev" className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
-						key="prev"
 						onClick={() => handlePageChange(currentPage - 1)}
 						className=" text-white">
 						˂˂
@@ -66,9 +62,8 @@ const Product_item = ({ products, productsPerPage }) => {
 
 		for (let i = startPage; i <= endPage; i++) {
 			pageNumbers.push(
-				<div className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div key={i} className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
-						key={i}
 						onClick={() => handlePageChange(i)}
 						className={`px-4 py-3 rounded-[50%]  text-white ${
 							i === currentPage
@@ -83,9 +78,8 @@ const Product_item = ({ products, productsPerPage }) => {
 
 		if (currentPage < totalPages) {
 			pageNumbers.push(
-				<div className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div key="next" className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
-						key="next"
 						onClick={() => handlePageChange(currentPage + 1)}
 						className=" text-white rounded-full">
 						˃˃
@@ -103,14 +97,14 @@ const Product_item = ({ products, productsPerPage }) => {
 
 	return (
 		<div className="product-items">
+			<Navbar />
 			<div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-16 overflow-x-hidden">
 				{renderProducts()}
 			</div>
-
 			{renderPagination()}
 			<Footer />
 		</div>
 	);
 };
 
-export default Product_item;
+export default ProductItem;

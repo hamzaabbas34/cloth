@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../../data.json";
-import Product_item from "./Product_item";
+import ProductItem from "./ProductItem"; // Corrected to PascalCase
 
 const ProductList = () => {
 	const productsPerPage = 5;
@@ -19,7 +19,8 @@ const ProductList = () => {
 			data-product-count={productsPerPage}
 			data-initial-column="4"
 			data-view="collection">
-			<Product_item products={data} productsPerPage={productsPerPage} />
+			<ProductItem products={data} productsPerPage={productsPerPage} />{" "}
+			{/* Corrected here */}
 		</section>
 	);
 };
