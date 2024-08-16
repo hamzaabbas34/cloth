@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/cloth/static/css/main.13077502.css",
-    "main.js": "/cloth/static/js/main.b2d8a9da.js",
+    "main.css": "/cloth/static/css/main.3d24b09c.css",
+    "main.js": "/cloth/static/js/main.eae73749.js",
     "static/js/453.171ddc7f.chunk.js": "/cloth/static/js/453.171ddc7f.chunk.js",
     "static/media/Anybody-VariableFont_wdth,wght.ttf": "/cloth/static/media/Anybody-VariableFont_wdth,wght.012ccb02157eb35fcf75.ttf",
     "static/media/body.ttf": "/cloth/static/media/body.381fc4672c18a3db8064.ttf",
     "static/media/Jost-Medium.ttf": "/cloth/static/media/Jost-Medium.7880ddb94a3253a0f044.ttf",
     "static/media/Jost-Regular.ttf": "/cloth/static/media/Jost-Regular.d2e182cd5d7f484ff398.ttf",
     "index.html": "/cloth/index.html",
-    "main.13077502.css.map": "/cloth/static/css/main.13077502.css.map",
-    "main.b2d8a9da.js.map": "/cloth/static/js/main.b2d8a9da.js.map",
+    "main.3d24b09c.css.map": "/cloth/static/css/main.3d24b09c.css.map",
+    "main.eae73749.js.map": "/cloth/static/js/main.eae73749.js.map",
     "453.171ddc7f.chunk.js.map": "/cloth/static/js/453.171ddc7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13077502.css",
-    "static/js/main.b2d8a9da.js"
+    "static/css/main.3d24b09c.css",
+    "static/js/main.eae73749.js"
   ]
 }
