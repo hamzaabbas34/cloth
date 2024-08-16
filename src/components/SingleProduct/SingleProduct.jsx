@@ -61,10 +61,14 @@ export default function SingleProduct() {
 				season={product.season}
 				id={parseInt(id)}
 			/>
-			<div className="2xl:px-56 md:px-8 lg:px-20 px-8">
+			<div className="2xl:px-56 md:px-8 lg:px-20 px-8 overflow-hidden">
 				<div className="product-item grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-					<div className="flex  gap-2 lg:flex myhead ">
-						<div className=" flex lg:flex-col   w-full  sm:w-full lg:w-1/6 xl:h-auto  h-fit  gap-2 myhead1">
+					<div className="flex  gap-2 lg:flex myhead  overflow-hidden ">
+						<div
+							className=" flex lg:flex-col   w-full  sm:w-full lg:w-1/6 xl:h-auto  h-fit  gap-2 myhead1 "
+							data-aos="fade-right"
+							data-aos-offset="800"
+							data-aos-duration="800">
 							<div
 								className=" border-2 border-black border-opacity-35 w-[80px] p-2  h-[100px] mydev"
 								onClick={() => handleThumbnailClick(0)}>
@@ -94,7 +98,7 @@ export default function SingleProduct() {
 							</div>
 							<div
 								className=" border-2 border-black border-opacity-35 w-[80px] p-2  h-[100px] mydev"
-								onClick={() => handleThumbnailClick(2)}>
+								onClick={() => handleThumbnailClick(3)}>
 								<img
 									src={product.img_url2}
 									alt={product.heading}
@@ -102,8 +106,11 @@ export default function SingleProduct() {
 								/>
 							</div>
 						</div>
-						{/*  */}
-						<div className=" lg:w-4/5  xl:w-4/5 md:w-full  w-[100%]   myhead2">
+						<div
+							className=" lg:w-4/5  xl:w-4/5 md:w-full  w-[100%]   myhead2 overflow-hidden"
+							data-aos="fade-left"
+							data-aos-offset="800"
+							data-aos-duration="800">
 							<Swiper
 								spaceBetween={10}
 								slidesPerView={1}
@@ -144,7 +151,11 @@ export default function SingleProduct() {
 							</Swiper>
 						</div>
 					</div>
-					<div className="">
+					<div
+						className=""
+						data-aos="fade-right"
+						data-aos-offset="800"
+						data-aos-duration="800">
 						<div className="w-100 flex justify-between items-center relative">
 							<h2 className="text-[1.8rem] font-Jost-Regular me-20">
 								{product.heading}
@@ -213,7 +224,11 @@ export default function SingleProduct() {
 					</div>
 				</div>
 
-				<div className="   font-Jost-Medium text-[1.2rem] flex justify-start  md:justify-center  lg:justify-center lg:items-center  xl:justify-center xl:items-center gap-5 border-b-2 border-b-black my-10 border-opacity-35 lg:flex-row md:flex-row flex-col">
+				<div
+					data-aos="fade-top"
+					data-aos-offset="800"
+					data-aos-duration="800"
+					className="   font-Jost-Medium text-[1.2rem] flex justify-start  md:justify-center  lg:justify-center lg:items-center  xl:justify-center xl:items-center gap-5 border-b-2 border-b-black my-10 border-opacity-35 lg:flex-row md:flex-row flex-col">
 					<div
 						onClick={() => setShow(1)}
 						className="flex  justify-between items-center  md:w-fit lg:w-fit   w-100  md:border-none lg:border-none border-b border-black">
@@ -262,12 +277,16 @@ export default function SingleProduct() {
 					<div className="hidden  md:block lg:block ">{accordion1()}</div>
 				)}
 
-				<div className="mt-16">
+				<div className="mt-16" data-aos="fade-left">
 					<h2 className="text-4xl font-Jost-Regular mb-10 mt-">
 						You Might Also Like
 					</h2>
 				</div>
-				<div className="">
+				<div
+					className=""
+					data-aos="fade-left"
+					data-aos-offset="500"
+					data-aos-duration="500">
 					<Swiper
 						spaceBetween={10}
 						slidesPerView={4}
@@ -316,7 +335,11 @@ export default function SingleProduct() {
 						</h2>
 					</div>
 				</div>
-				<ul className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16  overflow-x-hidden ">
+				<ul
+					className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16  overflow-x-hidden "
+					data-aos="fade-right"
+					data-aos-offset="800"
+					data-aos-duration="800">
 					{data
 						.filter((item) => myarr.includes(item.id))
 						.map((item) => (
@@ -332,12 +355,14 @@ export default function SingleProduct() {
 
 function Header2({ season, heading, id }) {
 	return (
-		<div className="text-center mt-24 py-10 flex justify-center items-center">
-			<span className="flex items-center">
-				<span className="font-Jost-Regular">
+		<div className=" mt-24 py-10 flex justify-center items-center text-center overflow-hidden ">
+			<div
+				className="flex items-center flex-wrap text-center"
+				data-aos="fade-top">
+				<div className="font-Jost-Regular text-center w-full sm:w-auto md:w-auto lg:w-auto ">
 					<Link to="/">Home</Link>
-				</span>
-				<span>
+				</div>
+				<div className="flex justify-center rotate-90  sm:rotate-0 md:rotate-0 lg:rotate-0  text-center w-full sm:w-auto md:w-auto lg:w-auto ">
 					<Icon
 						icon="iconamoon:arrow-right-2-duotone"
 						width="1rem"
@@ -345,11 +370,11 @@ function Header2({ season, heading, id }) {
 						style={{ color: "black" }}
 						className="mt-[1px]"
 					/>
-				</span>
-				<span className="font-Jost-Regular">
+				</div>
+				<div className="font-Jost-Regular w-full sm:w-auto md:w-auto lg:w-auto ">
 					<Link to={`/${season}`}>{season} Collection</Link>
-				</span>
-				<span>
+				</div>
+				<div className="flex justify-center   w-full sm:w-auto md:w-auto lg:w-auto  rotate-90  sm:rotate-0 md:rotate-0 lg:rotate-0">
 					<Icon
 						icon="iconamoon:arrow-right-2-duotone"
 						width="1rem"
@@ -357,11 +382,11 @@ function Header2({ season, heading, id }) {
 						style={{ color: "black" }}
 						className="mt-[1px]"
 					/>
-				</span>
-				<span>
+				</div>
+				<div className="w-full sm:w-auto md:w-auto lg:w-auto">
 					<Link to={`/product/${id}`}>{heading}</Link>
-				</span>
-			</span>
+				</div>
+			</div>
 		</div>
 	);
 }

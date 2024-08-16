@@ -6,6 +6,7 @@ import Collections from "./collections/Collections";
 import Features from "./Feature/Features";
 import Shapingd from "./shaping/ Shapingd";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const images1 = [
 	"https://i.pinimg.com/564x/8d/3f/6f/8d3f6f9223b9d728e3738697a5dc2c63.jpg", // Replace with your image paths
@@ -23,8 +24,7 @@ const images3 = [
 	"https://i.pinimg.com/564x/de/12/3f/de123f9d2a5b32f0837a9833fbaf4d02.jpg",
 ];
 
-const texts = ["Arrive", "Discover", "Explore"];
-const text1 = ["Summer", "Winter", "High"]; // Texts corresponding to images
+const text1 = ["Summer", "Winter"]; // Texts corresponding to images
 
 export default function Home() {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -59,7 +59,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="relative">
+		<div className="relative overflow-hidden">
 			<Navbar />
 			<div className="image-container mt-24">
 				<div className="text-overlay">
@@ -67,12 +67,14 @@ export default function Home() {
 						className={`overlay-inside font-Jost-Regular ${
 							fade ? "opacity-100" : "opacity-0"
 						}`}>
-						<div className={`text-container  tron ${fade && " troff"}`}>
-							<p>{texts[currentImageIndex]}</p>
-							<h2>{text1[currentImageIndex]}</h2>
-							<h2>Collections</h2>
-							<button>Shop</button>
-						</div>
+						<Link to={text1[currentImageIndex]?.toLowerCase() || ""}>
+							<div className={`text-container  tron ${fade && " troff"}`}>
+								<p>Arrive</p>
+								<h2>{text1[currentImageIndex]}</h2>
+								<h2>Collections</h2>
+								<button>Shop</button>
+							</div>
+						</Link>
 					</div>
 				</div>
 				<div className="image-set  im1">

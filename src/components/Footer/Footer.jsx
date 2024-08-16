@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 export default function Footer() {
 	useEffect(() => {
 		AOS.init({
-			duration: 500, // Duration of the animation in milliseconds
-			easing: "ease-in-out", // Easing function
-			once: true, // Whether animation should happen only once - while scrolling down
+			duration: 500, // Animation duration in milliseconds
+			easing: "ease-in-out", // Easing function for smoothness
+			once: true, // Animations will only happen once as you scroll down
 		});
 	}, []);
+
 	return (
 		<div className="w-100 bg-black overflow-x-hidden">
 			<div className="w-100 md:px-10 px-6 lg:px-16 grid lg:grid-cols-4 md:grid-cols-2 gap-5 grid-cols-1 border-b  ">
@@ -62,12 +63,10 @@ export default function Footer() {
 					data-aos="fade-left"
 					className=" text-white font-Jost-Regular md:px-5 lg:px-5 flex flex-col gap-2 py-6 md:py-10 lg:py-14">
 					<h2 className="font-Jost-Medium mb-2 ">Contact Us </h2>
-					<p>📧 sales@umzay.com</p>
-					<p>📱 +92 309 426 4121 </p>
+					<p>📧 sales@Hamza.com</p>
+					<p>📱 +92 301 961 2828 </p>
 				</div>
 			</div>
-
-			{/* <div className="text-white">copyRight</div> */}
 		</div>
 	);
 }

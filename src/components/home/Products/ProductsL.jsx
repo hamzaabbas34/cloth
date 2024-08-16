@@ -3,7 +3,7 @@ import data from "../../../data.json";
 import ProductItem from "./ProductItem"; // Corrected to PascalCase
 
 const ProductList = () => {
-	const productsPerPage = 5;
+	const productsPerPage = 7;
 
 	return (
 		<section

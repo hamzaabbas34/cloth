@@ -13,7 +13,6 @@ export default function Navbar() {
 		incrementQuantity,
 		removeFromCart,
 		decrementQuantity,
-		handleGenertedOrderName,
 		order,
 	} = useCart();
 
@@ -140,7 +139,7 @@ export default function Navbar() {
 				)}
 			</nav>
 			{cartopen && (
-				<asiderbar className="fixed right-0 top-0  shadow-2xl bg-white h-screen  xl:w-[25%]  md:w-1/2 w-3/4 lg:w-[40%] px-2 z-[10000]">
+				<asiderbar className="fixed right-0 top-0  shadow-2xl bg-white h-screen  xl:w-[25%]  md:w-1/2 w-[90%] lg:w-[40%] px-2 z-[10000]">
 					<div className=" relative">
 						<button
 							onClick={() => setCartOpen(!cartopen)}
@@ -169,11 +168,17 @@ export default function Navbar() {
 									<div className=" h-fit 	   ">
 										{cartItems.map((item) => (
 											<div className="w-full flex gap-2   mb-2 ">
-												<div key={item.id}>
-													<img src={item.img_url1} alt="" className="w-28   " />
+												<div
+													key={item.id}
+													className="w-[80px] h-36 overflow-hidden ">
+													<img
+														src={item.img_url1}
+														alt=""
+														className=" w-full h-full object-cover object-top   "
+													/>
 												</div>
-												<div className=" w-[40%] flex justify-between  flex-col">
-													<h2 className="text-[14px]">{item.heading}</h2>
+												<div className=" w-[40%] flex-1  flex justify-between  flex-col">
+													<h2 className="text-[16px]">{item.heading}</h2>
 													<p className="text-[14px] ">
 														Size : <span>{item.size}</span>
 													</p>
@@ -215,9 +220,7 @@ export default function Navbar() {
 									<h2 className=" text-[1.2rem] ">Total Prices </h2>
 									<div className="text-[1.2rem] ">Rs :{totalPrice}</div>
 								</div>
-								<button
-									onClick={() => handleGenertedOrderName()}
-									className=" text-[1.1rem] mt-3 b-1 rounded-md text-white bg-black font-Jost-Regular w-full py-3 ">
+								<button className=" text-[1.1rem] mt-3 b-1 rounded-md text-white bg-black font-Jost-Regular w-full py-3 ">
 									<Link to={`/product/order/${order}`}>Check Out</Link>
 								</button>
 								<button className=" text-[1.1rem] rounded-md font-Jost-Regular w-full py-2  b underline ">

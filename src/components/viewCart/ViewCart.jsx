@@ -28,14 +28,14 @@ export default function ViewCart() {
 							<div
 								key={item.id}
 								className="flex flex-wrap justify-between items-center xl-28 border-y-[1px] mb-10 border-black border-opacity-30 font-Jost-Medium py-5">
-								<div className="xl:w-[30%] lg:w-[40%] md:w-[40%] w-[80%] border-2">
+								<div className="xl:w-[30%] lg:w-[40%] md:w-[40%] w-[80%] ">
 									<div className="font-Jost-Regular flex  gap-3">
-										<div className="h-auto relative border-2 ">
+										<div className="h-auto relative  ">
 											<div className="w-[100px]">
 												<img
 													src={item.img_url1}
 													alt=""
-													className="  w-fit aspect-[4/5] object-cover h-full"
+													className="  w-fit aspect-[4/5] object-cover h-full object-top"
 												/>
 											</div>
 										</div>
@@ -66,8 +66,8 @@ export default function ViewCart() {
 												onClick={() => decrementQuantity(item.id)}>
 												<Icon
 													icon="fluent:subtract-20-filled"
-													width="1rem"
-													height="1rem"
+													width="2rem"
+													height="1.5rem"
 													style={{ color: "black" }}
 												/>
 											</button>
@@ -75,7 +75,7 @@ export default function ViewCart() {
 												{item.quantity}
 											</p>
 											<button
-												className="py-0 px-4 leading-none text-[1.2rem] text-black"
+												className="py-0 px-4 leading-none text-[1.2rem] text-black font-light"
 												onClick={() => incrementQuantity(item.id)}>
 												+
 											</button>

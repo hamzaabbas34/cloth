@@ -50,7 +50,9 @@ const ProductItem = ({ products, productsPerPage }) => {
 
 		if (currentPage > 1) {
 			pageNumbers.push(
-				<div key="prev" className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div
+					key="prev"
+					className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
 						onClick={() => handlePageChange(currentPage - 1)}
 						className=" text-white">
@@ -62,7 +64,9 @@ const ProductItem = ({ products, productsPerPage }) => {
 
 		for (let i = startPage; i <= endPage; i++) {
 			pageNumbers.push(
-				<div key={i} className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div
+					key={i}
+					className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
 						onClick={() => handlePageChange(i)}
 						className={`px-4 py-3 rounded-[50%]  text-white ${
@@ -78,7 +82,9 @@ const ProductItem = ({ products, productsPerPage }) => {
 
 		if (currentPage < totalPages) {
 			pageNumbers.push(
-				<div key="next" className="w-12 bg-black flex justify-center items-center rounded-full h-12">
+				<div
+					key="next"
+					className="w-12 bg-black flex justify-center items-center rounded-full h-12">
 					<button
 						onClick={() => handlePageChange(currentPage + 1)}
 						className=" text-white rounded-full">
@@ -98,7 +104,12 @@ const ProductItem = ({ products, productsPerPage }) => {
 	return (
 		<div className="product-items">
 			<Navbar />
-			<div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-16 overflow-x-hidden">
+			<h2
+				className="font-Jost-Medium 2xl:text text-center py-5  "
+				data-aos="fade-right">
+				My All Product{" "}
+			</h2>
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-16 overflow-x-hidden">
 				{renderProducts()}
 			</div>
 			{renderPagination()}

@@ -25,6 +25,9 @@ export default function Contact() {
 				(result) => {
 					console.log(result.text);
 					setsusMge(true);
+					setEmail("");
+					setName("");
+					setMsg("");
 				},
 				(error) => {
 					console.log(error.text);

@@ -66,7 +66,10 @@ export default function Featurelist({ data, count, show = "yes" }) {
 	const { recentViewId, addToCart } = useCart();
 
 	return (
-		<div className={`${count === 1 ? "lg:w-10/12" : ""}`}>
+		<div
+			data-aos="fade-right"
+			data-aos-duration="500"
+			className={`${count === 1 ? "lg:w-10/12" : ""}`}>
 			<li className={`${count === 1 ? "md:block lg:flex gap-5" : "w-full"}`}>
 				<Link
 					to={`/product/${data.id}`}

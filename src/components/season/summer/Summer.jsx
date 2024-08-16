@@ -67,11 +67,13 @@ export default function Summer() {
 				</button>
 			</div>
 			<ul
-				className={`grid grid-cols-1 ${count === 5 ? "md:grid-cols-3" : " "} ${
-					count === 4 ? "md:grid-cols-3" : " "
-				}  ${count === 3 ? "md:grid-cols-3  " : " "}  ${
-					count === 5 ? "lg:grid-cols-5" : " "
-				} ${count === 4 ? "lg:grid-cols-4" : " "}  ${
+				className={`grid grid-cols-1 sm:grid-cols-2 ${
+					count === 5 ? "md:grid-cols-3" : " "
+				} ${count === 4 ? "md:grid-cols-3" : " "}  ${
+					count === 3 ? "md:grid-cols-3  " : " "
+				}  ${count === 5 ? "lg:grid-cols-5" : " "} ${
+					count === 4 ? "lg:grid-cols-4" : " "
+				}  ${
 					count === 3 ? "lg:grid-cols-3  " : " "
 				}gap-4 mt-20 mb-16 ps-8 pe-4 lg:ps-16 lg:pe-10 md:ps-16 md:pe-10 overflow-x-hidden`}>
 				{data
