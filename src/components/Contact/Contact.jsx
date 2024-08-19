@@ -41,7 +41,7 @@ export default function Contact() {
 	}, 3000);
 
 	return (
-		<div>
+		<>
 			<Navbar />
 			<Header heading="Contact Us " linkname="contact" link="contact" />
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-4 lg:px-20 xl:px-20 2xl:px-56 ">
@@ -101,18 +101,18 @@ export default function Contact() {
 				<div className="font-Jost-Regular 2xl:px-28 lg:px-20 md:px-16 px-4 py-20 ">
 					<div className="">
 						<h2 className="font-Jost-Medium mb-3">Sales</h2>
-						<p className="opacity-50">sales@umzay.com</p>
-						<p>+92 309 426 4121</p>
+						<p className="opacity-50">hamzaofficial2022@gmail.com</p>
+						<p>+92 301 961 2828</p>
 					</div>
 					<div className="my-5">
 						<h2 className="font-Jost-Medium mb-3">Complaints</h2>
-						<p className="opacity-50">complaints@umzay.com</p>
-						<h3>+92 309 426 4121</h3>
+						<p className="opacity-50">hamzaofficial2022@gmail.com</p>
+						<h3>+92 301 961 2828</h3>
 					</div>
 					<div className="">
 						<h2 className="font-Jost-Medium mb-3">Wholesales</h2>
-						<p className="opacity-50">wholesales@umzay.com</p>
-						<p>+92 309 426 4121</p>
+						<p className="opacity-50">hamzaofficial2022@gmail.com</p>
+						<p>+92 301 961 2828</p>
 					</div>
 					<div className="my-5">
 						<h2 className="font-Jost-Medium mb-3">Social Media</h2>
@@ -146,6 +146,6 @@ export default function Contact() {
 				</div>
 			</div>
 			<Footer />
-		</div>
+		</>
 	);
 }

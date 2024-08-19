@@ -319,14 +319,14 @@ export default function Order() {
 	return (
 		<div>
 			<div className="border-b-[.5px] border-black border-opacity-30">
-				<nav className="flex justify-between items-center px-24 py-7">
+				<nav className="flex justify-between items-center  px-4 lg:px-24 md:px-10 py-7">
 					<button>
 						<Icon
 							icon="emojione-monotone:womans-clothes"
 							width="2rem"
 							height="2rem"
 							style={{ color: "black" }}
-							className="ms-5"
+							className="md:ms-0 lg:ms-5"
 						/>
 					</button>
 

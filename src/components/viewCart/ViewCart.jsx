@@ -10,7 +10,7 @@ export default function ViewCart() {
 		useCart();
 
 	return (
-		<div>
+		<>
 			<Navbar />
 			<Header link="cart" linkname="Your Shopping Cart" />
 			{cartItems.length > 0 ? (
@@ -97,6 +97,6 @@ export default function ViewCart() {
 					</span>
 				</div>
 			)}
-		</div>
+		</>
 	);
 }

@@ -5,9 +5,9 @@ import Footer from "../Footer/Footer";
 
 export default function About() {
 	return (
-		<div>
+		<>
 			<Navbar />
-			<Header heading="Abouts Us" linkname="about" />
+			<Header heading="Abouts Us" linkname="about" link="about" />
 
 			<main className="lg:px-52 md:px-20 px-8 flex flex-col gap-4 font-Jost-Regular py-10">
 				<p>
@@ -56,6 +56,6 @@ export default function About() {
 				</p>
 			</main>
 			<Footer />
-		</div>
+		</>
 	);
 }

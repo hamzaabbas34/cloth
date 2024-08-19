@@ -109,9 +109,9 @@ const ProductItem = ({ products, productsPerPage }) => {
 				data-aos="fade-right">
 				My All Product{" "}
 			</h2>
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-16 overflow-x-hidden">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-4 md:px-8 lg:px-16 overflow-x-hidden">
 				{renderProducts()}
-			</div>
+			</ul>
 			{renderPagination()}
 			<Footer />
 		</div>

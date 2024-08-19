@@ -18,10 +18,10 @@ export default function Summer() {
 	const getSpanClass = (value) => (count === value ? "bg-white" : "bg-black");
 
 	return (
-		<div>
+		<>
 			<Navbar />
-			<Header heading="Summer Collections" linkname="winter" />
-			<div className="flex justify-start items-center px-8 pt-10 mb-[-30px] gap-3">
+			<Header heading="Summer Collections" linkname="summer" link="summer" />
+			<div className="hidden justify-start items-center px-8 pt-10 mb-[-30px] gap-3 md:flex lg:flex">
 				<button onClick={() => setCount(5)}>
 					<div
 						className={`w-10 h-10 flex justify-center items-center gap-[2px] rounded-sm ${getButtonClass(
@@ -75,7 +75,7 @@ export default function Summer() {
 					count === 4 ? "lg:grid-cols-4" : " "
 				}  ${
 					count === 3 ? "lg:grid-cols-3  " : " "
-				}gap-4 mt-20 mb-16 ps-8 pe-4 lg:ps-16 lg:pe-10 md:ps-16 md:pe-10 overflow-x-hidden`}>
+				}gap-4 mt-20 mb-16 px-4 lg:ps-16 lg:pe-10 md:ps-8 md:pe-8 overflow-x-hidden`}>
 				{data
 					.filter((item) => item.season === "summer")
 					.slice(0, visibleCount)
@@ -93,6 +93,6 @@ export default function Summer() {
 				</div>
 			)}
 			<Footer />
-		</div>
+		</>
 	);
 }

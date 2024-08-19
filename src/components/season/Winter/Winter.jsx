@@ -18,10 +18,10 @@ export default function Winter() {
 	const getSpanClass = (value) => (count === value ? "bg-white" : "bg-black");
 
 	return (
-		<div>
+		<>
 			<Navbar />
-			<Header heading="Winter Collections" linkname="winter" />
-			<div className="flex justify-start items-center px-8 pt-10 mb-[-30px] gap-3">
+			<Header heading="Winter Collections" linkname="winter" link="winter" />
+			<div className="hidden md:flex lg:flex  justify-start items-center px-8 pt-10 mb-[-30px] gap-3">
 				<button onClick={() => setCount(5)}>
 					<div
 						className={`w-10 h-10 flex justify-center items-center gap-[2px] rounded-sm ${getButtonClass(
@@ -57,7 +57,7 @@ export default function Winter() {
 				</button>
 				<button onClick={() => setCount(1)}>
 					<div
-						className={`w-10 h-10 flex justify-center items-center gap-[2px] rounded-sm ${getButtonClass(
+						className={`w-10 h-10 flex justify-center items-center gap-[2px] rounded-sm rotate-90  ${getButtonClass(
 							1
 						)}`}>
 						<span className={`w-[1.5px] h-3 ${getSpanClass(1)}`}></span>
@@ -73,9 +73,9 @@ export default function Winter() {
 					count === 3 ? "md:grid-cols-3  " : " "
 				}  ${count === 5 ? "lg:grid-cols-5" : " "} ${
 					count === 4 ? "lg:grid-cols-4" : " "
-				}  ${
-					count === 3 ? "lg:grid-cols-3  " : " "
-				}gap-4 mt-20 mb-16 ps-8 pe-4 lg:ps-16 lg:pe-10 md:ps-16 md:pe-10 overflow-x-hidden`}>
+				}  ${count === 3 ? "lg:grid-cols-3  " : " "}   ${
+					count === 1 ? "lg:grid-cols-1 md:grid-cols-1  " : " "
+				} gap-4 mt-20 mb-16 ps-8 pe-4 lg:ps-16 lg:pe-10 md:ps-16 md:pe-10 overflow-x-hidden`}>
 				{data
 					.filter((item) => item.season === "winter")
 					.slice(0, visibleCount)
@@ -93,6 +93,6 @@ export default function Winter() {
 				</div>
 			)}
 			<Footer />
-		</div>
+		</>
 	);
 }
