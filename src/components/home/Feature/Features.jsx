@@ -26,7 +26,10 @@ export default function Features() {
 				data-aos="fade-left">
 				<h1 className="text-4xl">Featured Products</h1>
 			</div>
-			<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-4 lg:ps-16 lg:pe-16 md:ps-10 md:pe-10 overflow-x-hidden ">
+			<ul
+				data-aos="fade-right"
+				data-aos-duration="300"
+				className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-20 mb-16 px-4 lg:ps-16 lg:pe-16 md:ps-10 md:pe-10 overflow-x-hidden ">
 				{data.slice(0, visibleCount).map((item) => (
 					<Featurelist key={item.id} data={item} />
 				))}

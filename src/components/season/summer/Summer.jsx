@@ -66,7 +66,7 @@ export default function Summer() {
 					</div>
 				</button>
 			</div>
-			<ul
+			<ul   data-aos="fade-right" 
 				className={`grid grid-cols-1 sm:grid-cols-2 ${
 					count === 5 ? "md:grid-cols-3" : " "
 				} ${count === 4 ? "md:grid-cols-3" : " "}  ${

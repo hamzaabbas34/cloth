@@ -15,14 +15,7 @@ export default function Navbar() {
 	const [search, setSearch] = useState("");
 	const searchRef = useRef(null);
 
-	const {
-		cartItems,
-		totalPrice,
-		incrementQuantity,
-		removeFromCart,
-		decrementQuantity,
-		order,
-	} = useCart();
+	const { cartItems } = useCart();
 
 	// Memoize filtered data based on search input
 	const filteredData = useMemo(() => {
@@ -91,6 +84,7 @@ export default function Navbar() {
 				cartItems={cartItems}
 				searchbtn={searchbtn}
 				searchRef={searchRef}
+				setSearchBtn={setSearchBtn}
 			/>
 			<NavLg
 				menu={menu}
@@ -103,15 +97,7 @@ export default function Navbar() {
 				cartopen={cartopen}
 			/>
 			{/* Cart Sidebar */}
-			<Cartleft
-				setCartOpen={setCartOpen}
-				incrementQuantity={incrementQuantity}
-				totalPrice={totalPrice}
-				decrementQuantity={decrementQuantity}
-				removeFromCart={removeFromCart}
-				cartItems={cartItems}
-				order={order}
-			/>
+			<Cartleft cartopen={cartopen} setCartOpen={setCartOpen} />
 		</div>
 	);
 }
